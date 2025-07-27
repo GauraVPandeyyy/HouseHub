@@ -94,14 +94,14 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
             {isLoading ? 'Signing In...' : 'Sign In'}
           </button>
 
-          {/* <div className="mt-4 p-3 bg-gray-50 rounded-md">
+          <div className="mt-4 p-3 bg-gray-50 rounded-md">
             <p className="text-sm text-gray-600 font-medium mb-2">Demo Accounts:</p>
             <div className="space-y-1 text-xs text-gray-500">
               <div><strong>Resident:</strong> rajesh@gmail.com / password123</div>
               <div><strong>Manager:</strong> priya@gmail.com / password123</div>
               <div><strong>Admin:</strong> admin@society.com / password123</div>
             </div>
-          </div> */}
+          </div>
         </form>
       </div>
     </div>
