@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import {
-  MapPin,
-  Shield,
-  Car,
-  Dumbbell,
-  Trees,
-  Wifi,
-  Camera,
+import { 
+  MapPin, 
+  Shield, 
+  Car, 
+  Dumbbell, 
+  Trees, 
+  Wifi, 
+  Camera, 
   Phone,
   Mail,
   Clock
@@ -33,7 +33,7 @@ export default function LandingPage() {
     const registrationFee = 50000;
     const monthlyMaintenance = 5000;
     const annualMaintenance = monthlyMaintenance * 12;
-
+    
     return { registrationFee, monthlyMaintenance, annualMaintenance };
   };
 
@@ -71,7 +71,7 @@ export default function LandingPage() {
             <div className="lg:col-span-1">
               <PropertyChart properties={mockProperties} />
             </div>
-
+            
             <div className="lg:col-span-2">
               {/* Cost Calculator */}
               <div className="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -96,28 +96,20 @@ export default function LandingPage() {
               </div>
 
               {/* Google Maps Placeholder */}
-              <div className="bg-white rounded-lg shadow-md p-2">
+              <div className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Location</h3>
-                <div className="bg-gray-200 rounded-lg flex flex-col items-center justify-center">
-
-
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.147307048403!2d80.97428789580763!3d26.85581706763056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd30b340f71b%3A0x88e9bdf837b03fe1!2sCSI%20Towers!5e1!3m2!1sen!2sin!4v1753597424884!5m2!1sen!2sin"
-                    width="100%"
-                    height="350"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                  <p className="text-sm text-gray-500">Gomti Nagar Extension, Lucknow</p>
-
+                <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
+                    {<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.147307048403!2d80.97428789580763!3d26.85581706763056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd30b340f71b%3A0x88e9bdf837b03fe1!2sCSI%20Towers!5e1!3m2!1sen!2sin!4v1753597424884!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>}
+                    <p className="text-sm text-gray-500">Gomti Nagar Extension, Lucknow</p>
+                  </div>
                 </div>
                 <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
-                  <span>Last updated: {new Date().toLocaleDateString('en-IN', {
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric'
+                  <span>Last updated: {new Date().toLocaleDateString('en-IN', { 
+                    day: 'numeric', 
+                    month: 'long', 
+                    year: 'numeric' 
                   })}</span>
                   <div className="flex items-center space-x-1">
                     <Clock className="h-4 w-4" />
@@ -129,16 +121,16 @@ export default function LandingPage() {
           </div>
 
           {/* Property Filters and Listings */}
-          <PropertyFilters
-            properties={mockProperties}
+          <PropertyFilters 
+            properties={mockProperties} 
             onFilteredProperties={setFilteredProperties}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {filteredProperties.map((property) => (
-              <PropertyCard
-                key={property.id}
-                property={property}
+              <PropertyCard 
+                key={property.id} 
+                property={property} 
                 transactionType={transactionType}
               />
             ))}

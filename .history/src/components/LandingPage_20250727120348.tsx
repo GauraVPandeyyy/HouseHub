@@ -98,7 +98,7 @@ export default function LandingPage() {
               {/* Google Maps Placeholder */}
               <div className="bg-white rounded-lg shadow-md p-2">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Location</h3>
-                <div className="bg-gray-200 rounded-lg flex flex-col items-center justify-center">
+                <div className="bg-gray-200 rounded-lg flex flex- items-center justify-center">
 
 
                   <iframe
